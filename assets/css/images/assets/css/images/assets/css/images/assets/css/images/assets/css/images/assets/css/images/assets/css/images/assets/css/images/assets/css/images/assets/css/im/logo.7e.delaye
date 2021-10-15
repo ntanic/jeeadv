@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from cportal.jeeadv.ac.in/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/logo.png by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:00:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>JEE (Advanced) 2021- Candidate Login Page</title>
+
+		<meta name="description" content="User login page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="../../../../../../../../../../../../../../../../../../../../../../../../../../../../bootstrap.css" />
+		<link rel="stylesheet" href="../../../../../../../../../../../../../../../../../../../../../../../../../../../../font-awesome.css" />
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="../../../../../../../../../../../../../../../../../../../../../../../../../../../../ace-fonts.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="../../../../../../../../../../../../../../../../../../../../../../../../../../../../ace.css" />
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="/assets/css/ace-part2.css" />
+		<![endif]-->
+		<link rel="stylesheet" href="../../../../../../../../../../../../../../../../../../../../../../../../../../../../ace-rtl.css" />
+		<link rel="stylesheet" href="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="/assets/css/ace-ie.css" />
+		<![endif]-->
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="/assets/js/html5shiv.js"></script>
+		<script src="/assets/js/respond.js"></script>
+		<![endif]-->
+		<script src='../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../www.google.com/recaptcha/api.js'></script> 
+	</head>
+
+	<body class="login-layout">
+		<div class="main-container">
+			<!-- <div class="alert alert-block alert-warning">
+				<h3 class="center"> <b>Results will be available on June 10, 2019 10:00 IST at <a href="https://results.jeeadv.ac.in" target="_blank">https://results.jeeadv.ac.in</a></b></h3>
+			</div>  -->
+			<div class="main-content">
+				<div class="row">
+
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="login-container">
+
+							<div class="center">
+								<div class="space-6"></div>
+								<h1>
+
+
+									<!-- <i class="ace-icon fa fa-leaf green"></i> -->
+									<span class="red">JEE (Advanced) 2021</span>
+									<span class="red" id="id-text2">Candidate Portal</span>
+								</h1>
+						
+
+							</div>
+
+
+							<div class="space-6"></div>
+
+							<div class="position-relative">
+								<div id="login-box" class="login-box visible widget-box no-border">
+									<div class="widget-body">
+										<div class="widget-main">
+											<h4 class="header blue lighter bigger">
+												<i class="ace-icon fa fa-coffee green"></i>
+												Enter Your Information
+											</h4>
+
+											<div class="space-6"></div>
+
+											
+											<form action="https://cportal.jeeadv.ac.in/authenticate" method="POST" role="form" id="validation-form" onsubmit="return validate_fields()" autocomplete="off">
+                        <fieldset>
+													<!-- ONLY FOR STAGING
+                          <h1>MAINTENANCE: Please do not access</h1>
+                          <label class="block clearfix">
+														<span class="block input-icon input-icon-left">
+															<input type="password" name="adminkey" class="form-control" placeholder="Admin Key" id="adminkey" data-toggle="tooltip" title="Enter the admin key"/>
+															<i class="ace-icon fa fa-user"></i>
+														</span>
+													</label>
+                          -->
+                         
+                          
+                          
+
+                          <label class="block clearfix">
+														<span class="block input-icon input-icon-left">
+															<input type="text" name="AdvAppNo" class="form-control" placeholder="JEE (Advanced) Registration Number" id="AdvAppNo" onchange="check_reg_number()" data-toggle="tooltip" title="Enter your Advanced Registration Number which is starting with G"/>
+															<i class="ace-icon fa fa-user"></i>
+														</span>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-left">
+															<input type="text" name = "datepicker" id="datepicker" class="form-control" placeholder="Date of Birth (DD-MM-YYYY)" onchange="check_dob()"/>
+															<i class="ace-icon fa fa-birthday-cake"></i>
+														</span>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-left">
+															<div class="input-group">
+																<span class="input-group-addon">
+																	<i class="ace-icon fa fa-phone"></i>
+																</span>
+																<input class="form-control" type="text" name="mobileNo" id="mobileNo" placeholder="Mobile Number" onchange="check_mobile()" data-toggle="tooltip" title="Enter your mobile number without country code and without leading 0"/>
+															</div>
+														</span>
+													</label>
+
+													<!-- <label class="block clearfix">
+														<span class="block input-icon input-icon-left">
+															<div class="input-group">
+																<span class="input-group-addon">
+																	<i class="ace-icon fa fa-at"></i>
+																</span>
+																<input class="form-control" name="email_address" type="text" id="email_address" value="jss.gurav@gmail.com" placeholder="E-mail Address" onchange="check_email()"/>
+															</div>
+														</span>
+													</label>
+-->
+													<div class="g-recaptcha" data-sitekey="6Le0OMwZAAAAAIxqzfJxjHS2EdjpC3r792uCmSeL"></div>
+
+													<div class="space"></div>
+
+													<div class="clearfix">
+														<label class="inline">
+															<a href="../..//forget-reg.7f.delaye"><span class="lbl">Find Registration No.</span></a></br>
+															<!-- <a href="http://35.200.241.133/" target="_blank"><span class="lbl"><b class ="red">Forgot Email ID/Phone No?</b></span></a> -->
+														</label> 
+														<button type="submit" class="width-35 pull-right btn btn-sm btn-primary" name="login" id="login">
+															<i class="ace-icon fa fa-key"></i>
+															<span class="bigger-110">Login</span>
+														</button>
+													</div>
+
+													<div class="space-4"></div>
+												</fieldset>
+											</form>
+										</div><!-- /.widget-main -->
+									</div><!-- /.widget-body -->
+								</div><!-- /.login-box -->
+								<div class="center">
+									<img src="logo.80.delaye" align = "center" height="100" width="100"></img>
+								</div>
+							</div><!-- /.position-relative -->
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div><!-- /.main-content -->
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../js/jquery.js"></script>
+		<script src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../js/jquery-ui.js"></script>
+		<script src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../js/jquery.ui.touch-punch.js"></script>
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="/assets/js/jquery1x.js"></script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='../../../../../../../../../../../../../../../../../../../../../../../../../../../../../js/jquery.mobile.custom.js'>"+"<"+"/script>");
+		</script>
+		<script src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../js/chosen.jquery.js"></script>
+		<!-- ace scripts -->
+		<script src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../js/ace/ace.js"></script>
+		<script src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../js/ace/ace.widget-box.js"></script>
+		<script src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../js/ace/ace.widget-on-reload.js"></script>
+		<script src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+		  $( function() {
+			$( "#datepicker" ).datepicker({
+			  changeMonth: true,
+			  changeYear: true,
+			  dateFormat: "dd-mm-yy",
+			  defaultDate: "01-01-2001"
+			});
+		  } );
+		</script>
+		
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			
+			//you don't need this, just used for changing background
+			jQuery(function($) {
+			 $('#btn-login-dark').on('click', function(e) {
+				$('body').attr('class', 'login-layout');
+				$('#id-text2').attr('class', 'white');
+				$('#id-company-text').attr('class', 'blue');
+				
+				e.preventDefault();
+			 });
+			 $('#btn-login-light').on('click', function(e) {
+				$('body').attr('class', 'login-layout light-login');
+				$('#id-text2').attr('class', 'grey');
+				$('#id-company-text').attr('class', 'blue');
+				
+				e.preventDefault();
+			 });
+			 $('#btn-login-blur').on('click', function(e) {
+				$('body').attr('class', 'login-layout blur-login');
+				$('#id-text2').attr('class', 'white');
+				$('#id-company-text').attr('class', 'light-blue');
+				
+				e.preventDefault();
+			 });
+			 
+
+			});
+		</script>
+
+		<script type="text/javascript">
+      function check_reg_number()
+      {
+      	
+        var rn = document.getElementById("AdvAppNo").value;
+        if( rn.length < 12 || rn.length > 12 ) 
+        {
+          document.getElementById("AdvAppNo").value = "";
+		  window.alert("Enter a valid registration number");
+        }
+        else
+        {
+          
+            //var regNum_regExp = new RegExp("[A-Z]\d\{8\}");
+           // Should contain exactly 8 digits
+           
+          var rExp = new RegExp("G[0-9]\{11\}");
+          if( rExp.test(rn) === false )
+          {
+            document.getElementById("AdvAppNo").value = "";
+			window.alert("Enter a valid registration number");
+          }
+        }
+
+        
+      }
+
+      function check_dob(dob)
+      {
+        var c_dob = document.getElementById("datepicker").value;
+		console.log(c_dob);
+				var dob_array = c_dob.split("-");
+        if( c_dob.length < 10 || c_dob.length > 10 ) 
+        {
+          document.getElementById("datepicker").value = "";
+		  window.alert("Enter Date of Birth in the valid format");
+        }
+        else
+        {
+          var rExp = new RegExp("[0-9]\{2\}[-/][0-9]\{2\}[-/][0-9]\{4\}");
+          if( rExp.test(c_dob) === false )
+          {
+            document.getElementById("datepicker").value = "";
+			window.alert("Enter Date of Birth in the valid format");
+          }
+        }
+      }
+
+      function check_mobile()
+      {
+        var mobileNo = document.getElementById("mobileNo").value;
+		if(mobileNo.length < 6 || mobileNo.length > 14){
+			document.getElementById("mobileNo").value = "";
+			window.alert("Enter a valid mobile number without country code (Only Numbers are allowed)");
+		}
+		var rExp = new RegExp("[0-9]");
+		if( rExp.test(mobileNo) === false )
+		{
+			document.getElementById("mobileNo").value = "";
+			window.alert("Enter a valid mobile number without country code (Only Numbers are allowed)");
+		}
+      }
+
+      /*function check_email()
+      {
+        var email_reg= "^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$";
+        var email = document.getElementById("email_address").value;
+        var rExp = new RegExp(email_reg);
+        if( rExp.test(email) === false )
+        {
+          document.getElementById("email_address").value = "";
+		  window.alert("Enter a valid Email ID");
+        }
+      }*/
+
+      function validate_fields()
+			{
+        var rn = document.getElementById("AdvAppNo").value;
+        var c_dob = document.getElementById("dob").value;
+        var mobileNo = document.getElementById("mobileNo").value;
+        var email = document.getElementById("email_address").value;
+
+				if(rn == null || rn == "") 
+				{
+					return false;
+				}
+				if(c_dob == null || c_dob == "")
+				{
+					return false;
+				}
+				if(mobileNo == null || mobileNo == "") 
+				{
+					return false;
+				}
+				if(email == null || email == "")
+				{
+					return false;
+				}
+				return true;
+			}
+		</script>
+		<script>
+			$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip();   
+			});
+		</script>
+	</body>
+
+<!-- Mirrored from cportal.jeeadv.ac.in/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/assets/css/images/logo.png by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 07:00:32 GMT -->
+</html>
